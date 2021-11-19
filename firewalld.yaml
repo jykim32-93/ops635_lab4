@@ -1,0 +1,15 @@
+- hosts: ansible
+  tasks:
+   - name: disable mdns
+     firewalld:
+      service: mdns
+      permanent: yes
+      immediate: yes
+      state: disabled
+   - name: disable cockpit
+     firewalld:
+      service: cockpit
+      permanent: yes
+      immediate: yes
+      state: disabled
+   

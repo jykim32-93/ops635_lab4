@@ -1,0 +1,6 @@
+- hosts: ansible
+  tasks:
+  - name: bind-utils package is fully up-to-date
+    yum:
+     name: bind-utils
+     state: present

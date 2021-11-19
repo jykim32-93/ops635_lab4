@@ -1,0 +1,15 @@
+- hosts: ansible
+  tasks:
+   - name: enable http
+     firewalld:
+      service: http
+      permanent: yes
+      immediate: yes
+      state: enabled
+   - name: enable https
+     firewalld:
+      service: https
+      permanent: yes
+      immediate: yes
+      state: enabled
+
